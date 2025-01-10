@@ -6,11 +6,6 @@ from torch import nn
 from tqdm import tqdm
 from sh_utils import eval_complex_sh, scatter2ComplexSH
 from torch.utils.tensorboard import SummaryWriter
-import debugpy
-
-debugpy.listen(5678)
-print("Waiting for debugger attach")
-debugpy.wait_for_client()
 
 parser = argparse.ArgumentParser(description='SH optimization')
 parser.add_argument('--model_save_path', type=str, default='.', help='Path to save the model')
